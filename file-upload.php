@@ -4,14 +4,14 @@
 </form>
 
 <?php
-if ($handle = opendir('C:/xampp/htdocs/uploads/')) {
+if ($handle = opendir(__DIR__)) {
+  echo "<h1>File list:</h1>";
    while (false !== ($file = readdir($handle))) {
           if ($file != "." && $file != "..") {
             $filelist = '<li><a href="'.$file.'">'.$file.'</a></li>';
+            echo "<ul>$filelist</ul>";
           }
        }
   closedir($handle);
   }
 ?>
-<h1>File list:</h1>
-<ul><?php echo $filelist; ?></ul>
