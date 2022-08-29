@@ -1,5 +1,5 @@
 <?php
-$destination ="__DIR__".$_FILES['userfile']['name'];
+$destination = $_FILES['userfile']['name'];
 $tmp = $_FILES['userfile']['tmp_name'];
 
 if (is_uploaded_file($tmp)){
